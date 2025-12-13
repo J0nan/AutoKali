@@ -4,14 +4,14 @@ There are several types of configurations available to use.
 
 ## Table of Content <!-- omit in toc -->
 
-- [Types of machines](#types-of-machines)
+- [Types of machines available](#types-of-machines-available)
   - [Generic](#generic)
   - [Lite](#lite)
 - [Install](#install)
   - [Automatic Install](#automatic-install)
   - [Manual Install](#manual-install)
 
-## Types of machines
+## Types of machines available
 
 ### Generic
 
@@ -27,7 +27,7 @@ This guide is focused in Kali Linux using VirtualBox
 
 ### Automatic Install
 
-This guide uses a custom ISO made using [GitHub Actions](../.github/workflows/create-unattended-kali.yml) and uploaded to the releases of this repository.
+This guide uses a custom ISO made using [GitHub Actions](.github/workflows/create-unattended-kali.yml) and uploaded to the releases of this repository.
 
 1. [Download](https://github.com/J0nan/AutoKali/releases) the modified ISO. I recommend to download one part at a time, because sometimes if you download several parts at the same time it is likely to failed.
 2. Decompress the downloaded files.
