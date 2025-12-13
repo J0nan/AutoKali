@@ -49,6 +49,11 @@ jobs:
             -cache-inodes -J -l -b isolinux/isolinux.bin \
             -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 \
             -boot-info-table -o "${UNATTENDED_ISO_NAME}" /tmp/kaliISO
+            
+      - name: Free space before splitting
+        run: |
+          rm -f "${{ env.ISO_FILENAME }}"          # remove downloaded ISO
+          sudo rm -rf /tmp/kaliISO                 # remove extracted tree
 
       - name: Split ISO into 1.86GB parts using 7-Zip
         run: |
