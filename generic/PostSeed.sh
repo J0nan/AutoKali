@@ -63,7 +63,7 @@ chown -R kali:kali /opt/go/bin
 
 # Docker + docker compose
 echo -e "${Blue}[*] Installing Docker and docker compose${ColorOff}"
-apt remove docker.io docker-compose -y
+apt purge docker.io docker-compose -y
 apt update
 apt install ca-certificates curl -y
 install -m 0755 -d /etc/apt/keyrings
@@ -121,6 +121,7 @@ ln -s $(which codium) /usr/bin/code
 # Web applications tools
 # Nuclei
 echo -e "${Blue}[*] Installing nuclei${ColorOff}"
+apt purge nuclei -y
 go install github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 
 # Interactsh
@@ -134,7 +135,7 @@ ln -s /opt/testssl/testssl.sh /usr/bin/testssl
 
 # wafw00f
 echo -e "${Blue}[*] Installing wafw00f${ColorOff}"
-apt remove wafw00f -y
+apt purge wafw00f -y
 pipx install git+https://github.com/EnableSecurity/wafw00f.git
 ln -s /.local/share/pipx/venvs/wafw00f/bin/wafw00f /usr/bin/wafw00f
 
@@ -200,7 +201,7 @@ ln -s /opt/git-dumper/git-dumper /usr/bin/git-dumper
 # Infrastructure tools
 # Onesixtyone (SNMP)
 echo -e "${Blue}[*] Installing onesixtyone${ColorOff}"
-apt remove onesixtyone -y
+apt purge onesixtyone -y
 git clone https://github.com/trailofbits/onesixtyone.git /opt/onesixtyone
 gcc -o /opt/onesixtyone/onesixtyone /opt/onesixtyone/onesixtyone.c
 ln -s /opt/onesixtyone/onesixtyone /usr/bin/onesixtyone
